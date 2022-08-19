@@ -1,0 +1,94 @@
+body {
+  background-color: hsl(30deg, 38%, 92%);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 600px;
+  margin-top: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin-top: 0;
+  }
+}
+.container__picture {
+  background-image: url(../images/image-product-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 500px) {
+  .container__picture {
+    height: 48vh;
+  }
+}
+.container__info {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 26px;
+}
+.container__info__product {
+  font-family: "Monserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(228deg, 12%, 48%);
+}
+.container__info__title {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: hsl(212deg, 21%, 14%);
+  line-height: 37px;
+}
+.container__info__description {
+  font-family: "Monserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: hsl(228deg, 12%, 48%);
+  line-height: 25px;
+}
+.container__info__price--discount {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 500;
+  font-size: 38px;
+  color: hsl(158deg, 36%, 37%);
+}
+.container__info__price--original {
+  font-family: "Monserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: hsl(228deg, 12%, 48%);
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.container__info__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(158deg, 36%, 37%);
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.container__info__button:active {
+  background-color: hsl(158deg, 38%, 25%);
+}
+.container__info__button--text {
+  font-family: "Monserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: hsl(0deg, 0%, 100%);
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,102 @@
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 600px;
+  margin-top: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin-top: 0;
+  }
+
+  &__picture {
+    background-image: url(../images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 500px) {
+      height: 48vh;
+    }
+  }
+
+  &__info {
+    background-color: hsl(0, 0%, 100%);
+    padding: 26px;
+
+    &__product {
+      font-family: "Monserrat", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: hsl(228, 12%, 48%);
+    }
+
+    &__title {
+      font-family: "Fraunces", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: hsl(212, 21%, 14%);
+      line-height: 37px;
+    }
+
+    &__description {
+      font-family: "Monserrat", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      color: hsl(228, 12%, 48%);
+      line-height: 25px;
+    }
+
+    &__price {
+      &--discount {
+        font-family: "Fraunces", sans-serif;
+        font-weight: 500;
+        font-size: 38px;
+        color: hsl(158, 36%, 37%);
+      }
+
+      &--original {
+        font-family: "Monserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: hsl(228, 12%, 48%);
+        text-decoration: line-through;
+        margin-left: 10px;
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: hsl(158, 36%, 37%);
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+
+      &:active {
+        background-color: hsl(158, 38%, 25%);
+      }
+
+      &--text {
+        font-family: "Monserrat", sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        color: hsl(0, 0%, 100%);
+        margin-left: 10px;
+      }
+    }
+  }
+}
